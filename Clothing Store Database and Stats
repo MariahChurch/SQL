@@ -1,0 +1,28 @@
+--Create and clothing store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, sold INTEGER, quantity INTEGER, price INTEGER);
+
+INSERT INTO store VALUES (1, "long sleeve top", 20, 50, 20);
+INSERT INTO store VALUES (2, "turtleneck", 23, 35, 25);
+INSERT INTO store VALUES (3, "cropped tee", 47, 62, 18);
+INSERT INTO store VALUES (4, "ripped jeans", 27, 45, 45);
+INSERT INTO store VALUES (5, "shorts", 15, 35, 28);
+INSERT INTO store VALUES (6, "sports bra", 20, 25, 48);
+INSERT INTO store VALUES (7, "leggings", 33, 45, 32);
+INSERT INTO store VALUES (8, "biker shorts", 16, 32, 23);
+INSERT INTO store VALUES (9, "socks", 51, 78, 10);
+INSERT INTO store VALUES (10, "underwear", 13, 40, 8);
+INSERT INTO store VALUES (11, "headband", 8, 15, 5);
+INSERT INTO store VALUES (12, "necklace", 19, 25, 18);
+INSERT INTO store VALUES (13, "earrings", 34, 42, 20);
+INSERT INTO store VALUES (14, "tank top", 33, 38, 12);
+INSERT INTO store VALUES (15, "ponytails", 40, 55, 7);
+
+--display datatbase ordered by price.
+SELECT * FROM store ORDER BY price;
+
+--how many items has the store sold?
+SELECT SUM(sold) FROM store;
+
+--which item has sold the most?
+SELECT MAX(sold) FROM store;
